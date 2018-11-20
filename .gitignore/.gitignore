@@ -2,7 +2,7 @@
 *.class
 *.iml
 git
-.idea/*
+/.idea/
 # Log file
 *.log
 
