@@ -1,4 +1,4 @@
-package gl.common.thread;
+package gl.passhelper.support;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
