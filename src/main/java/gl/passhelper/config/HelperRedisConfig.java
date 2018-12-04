@@ -5,6 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.connection.RedisClusterConfiguration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -32,6 +33,7 @@ public class HelperRedisConfig {
     }
 
     @Bean("helperClusterRedisConnectionFactory")
+    @Profile("ho")
     public RedisConnectionFactory clusterRedisConnectionFactory() {
         LettuceClientConfiguration clientConfiguration = LettucePoolingClientConfiguration.builder()
                 .poolConfig(new GenericObjectPoolConfig()).build();
